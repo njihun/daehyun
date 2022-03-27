@@ -45,6 +45,6 @@ function startpage() {
             result = "대현고등학교 프로그래밍 동아리 멤버가 아닙니다.";
         }
     }
+    window.close();
     alert(result);
-    window.close()
 }
