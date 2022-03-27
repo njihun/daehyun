@@ -9,7 +9,8 @@ if (window.confirm("대현고등학교 학생입니까?")) {
     window.name();
 } else {
     alert("이 페이지는 대현고등학교 학생을 위한 페이지입니다.")
-    window.close();
+    window.location.assign(window.location.href);
+    // window.close();
 }
 function name() {
     if (my.name == null) {
@@ -45,6 +46,8 @@ function startpage() {
             result = "대현고등학교 프로그래밍 동아리 멤버가 아닙니다.";
         }
     }
-    window.close();
     alert(result);
+    window.location.assign(window.location.href);
+    // window.close();
+
 }
