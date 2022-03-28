@@ -16,7 +16,15 @@ if (window.confirm("대현고등학교 학생입니까?")) {
 } else {
     alert("이 페이지는 대현고등학교 학생을 위한 페이지입니다.")
     window.location.assign(window.location.href);
-    // window.close();
+}
+function mOver(obj) {
+    obj.innerHTML = "동아리 멤버 목록";
+    Members = "총 "+MemberList.length+"명";
+    for(i=0;i<MemberList.length;i++){
+        MemberList[i].name[1] = "*";
+        Members += "<li>"+MemberList[i].name+"</li>";
+    }
+    obj.innerHTML += "<ul>"+Members+"</ul>";
 }
 function name() {
     if (my.name == null) {
@@ -43,7 +51,7 @@ function startpage() {
     for (i = 0; i < MemberList.length; i++) {
         if (MemberList[i].name === my.name) {
             if (MemberList[i].studno === my.studno) {
-                document.write(my.name + "님 반가워요<br>")
+                document.write(my.name + "님 반가워요")
                 return;
             } else {
                 result = "대현고등학교 프로그래밍 동아리 멤버가 아닙니다.";
@@ -54,6 +62,4 @@ function startpage() {
     }
     alert(result);
     window.location.assign(window.location.href);
-    // window.close();
-
 }
