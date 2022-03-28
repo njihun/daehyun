@@ -4,6 +4,9 @@ MemberList = [
     { name: "나예준", studno: "10106" },
     { name: "허윤제", studno: "10123" },
     { name: "유진오", studno: "10114" },
+    { name: "김태연", studno: "10606" },
+    { name: "김민재", studno: "10304" },
+    { name: "박세현", studno: "10610" },
 ];
 if (window.confirm("대현고등학교 학생입니까?")) {
     var my = {};
