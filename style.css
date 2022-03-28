@@ -24,9 +24,9 @@ body {
     background-color: gray;
     text-align: left;
 }
-#MemberList li {
+/* #MemberList li {
     font-weight: normal;
-}
+} */
 #MemberList:hover ul {
     display: block;
 }
