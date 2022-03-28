@@ -1,4 +1,4 @@
-/* body {
+body {
     margin: 0;
     background-image: url("https://placeimg.com/640/480/tech");
     background-size: cover;
@@ -29,4 +29,4 @@
 }
 #MemberList:hover ul {
     display: block;
-} */
+}
