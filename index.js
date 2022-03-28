@@ -19,6 +19,7 @@ if (window.confirm("대현고등학교 학생입니까?")) {
 }
 function mOver(obj) {
     obj.innerHTML = "동아리 멤버 목록";
+    let Members;
     Members = "총 " + MemberList.length + "명";
     for (i = 0; i < MemberList.length; i++) {
         Members += "<li>" + MemberList[i].name + "</li>";
