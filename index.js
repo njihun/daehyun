@@ -17,14 +17,14 @@ if (window.confirm("대현고등학교 학생입니까?")) {
     alert("이 페이지는 대현고등학교 학생을 위한 페이지입니다.")
     window.location.assign(window.location.href);
 }
-function mOver(obj) {
-    obj.innerHTML = "동아리 멤버 목록";
-    Members = "총 "+MemberList.length+"명";
-    for(i=0;i<MemberList.length;i++){
-        Members += "<li>"+MemberList[i].name+"</li>";
-    }
-    obj.innerHTML += "<ul>"+Members+"</ul>";
-}
+// function mOver(obj) {
+//     obj.innerHTML = "동아리 멤버 목록";
+//     Members = "총 "+MemberList.length+"명";
+//     for(i=0;i<MemberList.length;i++){
+//         Members += "<li>"+MemberList[i].name+"</li>";
+//     }
+//     obj.innerHTML += "<ul>"+Members+"</ul>";
+// }
 function name() {
     if (my.name == null) {
         window.location.assign(window.location.href);
