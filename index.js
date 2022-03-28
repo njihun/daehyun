@@ -21,7 +21,6 @@ function mOver(obj) {
     obj.innerHTML = "동아리 멤버 목록";
     Members = "총 "+MemberList.length+"명";
     for(i=0;i<MemberList.length;i++){
-        MemberList[i].name[1] = "*";
         Members += "<li>"+MemberList[i].name+"</li>";
     }
     obj.innerHTML += "<ul>"+Members+"</ul>";
