@@ -1,4 +1,4 @@
-PassWord = "Daehyun22";
+PassWord = "대현22";
 TeacherList = [
     { name: "남지훈", pw: PassWord},
 ];
