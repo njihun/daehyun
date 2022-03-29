@@ -32,7 +32,7 @@ function TeacherName() {
         window.location.assign(window.location.href);
     } else if (my.name == "") {
         my.name = window.prompt("이름을 입력하세요", "홍길동");
-        window.name();
+        window.TeacherName();
     } else {
         my.pw = window.prompt("암호를 입력하세요", "PassWord");
         window.pw();
