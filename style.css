@@ -17,6 +17,7 @@ body {
     border: 2px solid black;
     background-color: white;
     margin: 100px auto;
+    padding: 3px;
 }
 #MemberList ul {
     display: none;
