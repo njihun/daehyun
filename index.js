@@ -1,3 +1,7 @@
+PassWord = "Daehyun22";
+TeacherList = [
+    { name: "남지훈", pw: PassWord},
+];
 MemberList = [
     { name: "손유섭", studno: "10110" },
     { name: "남지훈", studno: "10107" },
@@ -14,7 +18,47 @@ if (window.confirm("대현고등학교 학생입니까?")) {
     my.name = window.prompt("이름을 입력하세요", "홍길동");
     window.name();
 } else {
-    alert("이 페이지는 대현고등학교 학생을 위한 페이지입니다.")
+    if (window.confirm("대현고등학교 선생님입니까?")) {
+        var my = {};
+        my.name = window.prompt("이름을 입력하세요", "홍길동");
+        window.TeacherName();
+    }else{
+    window.location.assign(window.location.href);
+    alert("이 페이지는 대현고등학교 전용 페이지입니다.");
+    }
+}
+function TeacherName() {
+    if (my.name == null) {
+        window.location.assign(window.location.href);
+    } else if (my.name == "") {
+        my.name = window.prompt("이름을 입력하세요", "홍길동");
+        window.name();
+    } else {
+        my.pw = window.prompt("암호를 입력하세요", "PassWord");
+        window.pw();
+    }
+}
+function pw() {
+    if (my.pw == null||my.pw=="") {
+        window.location.assign(window.location.href);
+    } else {
+        window.administratorpage();
+    }
+}
+function administratorpage() {
+    for (i = 0; i < TeacherList.length; i++) {
+        if (TeacherList[i].name === my.name) {
+            if (TeacherList[i].pw === my.pw) {
+                document.write(my.name + "님 반가워요")
+                return;
+            } else {
+                result = "페이지 접근 권한이 없습니다."+my.pw+".";
+            }
+        } else {
+            result = "페이지 접근 권한이 없습니다.";
+        }
+    }
+    alert(result);
     window.location.assign(window.location.href);
 }
 function mOver(obj) {
@@ -54,10 +98,10 @@ function startpage() {
                 document.write(my.name + "님 반가워요")
                 return;
             } else {
-                result = "대현고등학교 프로그래밍 동아리 멤버가 아닙니다.";
+                result = "페이지 접근 권한이 없습니다.";
             }
         } else {
-            result = "대현고등학교 프로그래밍 동아리 멤버가 아닙니다.";
+            result = "페이지 접근 권한이 없습니다.";
         }
     }
     alert(result);
