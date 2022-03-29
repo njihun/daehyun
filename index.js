@@ -52,7 +52,7 @@ function administratorpage() {
                 document.write(my.name + "님 반가워요")
                 return;
             } else {
-                result = "페이지 접근 권한이 없습니다."+my.pw+".";
+                result = "페이지 접근 권한이 없습니다.";
             }
         } else {
             result = "페이지 접근 권한이 없습니다.";
