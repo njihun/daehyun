@@ -13,7 +13,7 @@ MemberList = [
     { name: "박세현", studno: "10610" },
     { name: "정우진", studno: "10815" },
     { name: "정민겸", studno: "10321" },
-    { name: "정우진", studno: "10815" },
+    { name: "이동주", studno: "10716" },
 ];
 if (window.confirm("대현고등학교 학생입니까?")) {
     var my = {};
