@@ -1,6 +1,6 @@
 PassWord = "대현22";
 TeacherList = [
-    { name: "남지훈", pw: PassWord},
+    { name: "남지훈", pw: PassWord },
 ];
 MemberList = [
     { name: "손유섭", studno: "10110" },
@@ -24,9 +24,9 @@ if (window.confirm("대현고등학교 학생입니까?")) {
         var my = {};
         my.name = window.prompt("이름을 입력하세요", "홍길동");
         window.TeacherName();
-    }else{
-    window.location.assign(window.location.href);
-    alert("이 페이지는 대현고등학교 전용 페이지입니다.");
+    } else {
+        window.location.assign(window.location.href);
+        alert("이 페이지는 대현고등학교 전용 페이지입니다.");
     }
 }
 function TeacherName() {
@@ -41,7 +41,7 @@ function TeacherName() {
     }
 }
 function pw() {
-    if (my.pw == null||my.pw=="") {
+    if (my.pw == null || my.pw == "") {
         window.location.assign(window.location.href);
     } else {
         window.administratorpage();
@@ -70,7 +70,7 @@ function mOver(obj) {
     for (i = 0; i < MemberList.length; i++) {
         Members += "<li>" + MemberList[i].name + "</li>";
     }
-    obj.innerHTML += "<ul>" + Members + "</ul>";
+    obj.innerHTML += "<ol>" + Members + "</ol>";
 }
 function name() {
     if (my.name == null) {

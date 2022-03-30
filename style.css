@@ -19,7 +19,7 @@ body {
     margin: 100px auto;
     padding: 3px;
 }
-#MemberList ul {
+#MemberList ol {
     display: none;
     margin: 0;
     background-color: gray;
@@ -28,6 +28,15 @@ body {
 #MemberList li {
     font-weight: normal;
 }
-#MemberList:hover ul {
+#MemberList:hover ol {
     display: block;
+}
+table {
+    background-color: black;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+td {
+    background-color: white;
 }
