@@ -51,7 +51,8 @@ function administratorpage() {
     for (i = 0; i < TeacherList.length; i++) {
         if (TeacherList[i].name === my.name) {
             if (TeacherList[i].pw === my.pw) {
-                document.write(my.name + "님 반가워요")
+                document.write(my.name + "님 반가워요");
+                window.teacherlist();
                 return;
             } else {
                 result = "페이지 접근 권한이 없습니다.";
@@ -62,6 +63,26 @@ function administratorpage() {
     }
     alert(result);
     window.location.assign(window.location.href);
+}
+function teacherlist() {
+    document.getElementById("TeacherList").innerHTML = "선생님 목록";
+    let Teachers;
+    Teachers = "총 " + TeacherList.length + "명";
+    for (i = 0; i < TeacherList.length; i++) {
+        Teachers += "<li>" + TeacherList[i].name + "</li>";
+    }
+    for (i = 0; i < TeacherList.length; i++) {
+        if (TeacherList[i].name === my.name) {
+            if (TeacherList[i].pw === my.pw) {
+                document.getElementById("TeacherList").innerHTML += "<ol>" + Teachers + "</ol>";
+                return;
+            } else {
+                document.getElementById("TeacherList").innerHTML += "<ol><li>접근 권한이 없습니다.</li></ol>";
+            }
+        } else {
+            document.getElementById("TeacherList").innerHTML += "<ol><li>접근 권한이 없습니다.</li></ol>";
+        }
+    }
 }
 function mOver(obj) {
     obj.innerHTML = "동아리 멤버 목록";
@@ -97,7 +118,7 @@ function startpage() {
     for (i = 0; i < MemberList.length; i++) {
         if (MemberList[i].name === my.name) {
             if (MemberList[i].studno === my.studno) {
-                document.write(my.name + "님 반가워요")
+                document.write(my.name + "님 반가워요");
                 return;
             } else {
                 result = "페이지 접근 권한이 없습니다.";
