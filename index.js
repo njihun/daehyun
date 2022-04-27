@@ -1,6 +1,7 @@
-PassWord = "대현22";
+PassWord = "Daehyun22";
 TeacherList = [
     { name: "남지훈", pw: PassWord },
+    { name: "박형식", pw: PassWord },
 ];
 MemberList = [
     { name: "손유섭", studno: "10110" },
