@@ -1,34 +1,30 @@
-PassWord = "Daehyun22";
+PassWord = "대현22";
 TeacherList = [
     { name: "남지훈", pw: PassWord },
-    { name: "박형식", pw: PassWord },
 ];
 MemberList = [
-    { name: "손유섭", studno: "10110" },
-    { name: "남지훈", studno: "10107" },
-    { name: "나예준", studno: "10106" },
-    { name: "허윤제", studno: "10123" },
-    { name: "유진오", studno: "10114" },
-    { name: "김태연", studno: "10606" },
-    { name: "김민재", studno: "10304" },
-    { name: "박세현", studno: "10610" },
-    { name: "정우진", studno: "10815" },
-    { name: "정민겸", studno: "10321" },
-    { name: "이동주", studno: "10716" },
+    { name: "김동현", studno: "10106" },
+    { name: "김은호", studno: "10206" },
+    { name: "정지욱", studno: "10223" },
+    { name: "엄찬우", studno: "10317" },
+    { name: "김훈", studno: "10414" },
+    { name: "박진기", studno: "10417" },
+    { name: "방세현", studno: "10418" },
+    { name: "한정훈", studno: "10428" },
+    { name: "류승원", studno: "10710" },
+    { name: "안재현", studno: "10716" },
 ];
 if (window.confirm("대현고등학교 학생입니까?")) {
     var my = {};
     my.name = window.prompt("이름을 입력하세요", "홍길동");
     window.name();
+} else if (window.confirm("페이지 관리자입니까?")) {
+    var my = {};
+    my.name = window.prompt("이름을 입력하세요", "홍길동");
+    window.TeacherName();
 } else {
-    if (window.confirm("대현고등학교 선생님입니까?")) {
-        var my = {};
-        my.name = window.prompt("이름을 입력하세요", "홍길동");
-        window.TeacherName();
-    } else {
-        window.location.assign(window.location.href);
-        alert("이 페이지는 대현고등학교 전용 페이지입니다.");
-    }
+    window.location.assign(window.location.href);
+    alert("이 페이지는 대현고등학교 전용 페이지입니다.");
 }
 function TeacherName() {
     if (my.name == null) {
@@ -65,8 +61,7 @@ function administratorpage() {
     alert(result);
     window.location.assign(window.location.href);
 }
-function teacherlist() {
-    document.getElementById("TeacherList").innerHTML = "선생님 목록";
+function teacherlist(obj) {
     let Teachers;
     Teachers = "총 " + TeacherList.length + "명";
     for (i = 0; i < TeacherList.length; i++) {
@@ -75,18 +70,19 @@ function teacherlist() {
     for (i = 0; i < TeacherList.length; i++) {
         if (TeacherList[i].name === my.name) {
             if (TeacherList[i].pw === my.pw) {
-                document.getElementById("TeacherList").innerHTML += "<ol>" + Teachers + "</ol>";
+                obj.innerHTML = "관리자 목록";
+                obj.innerHTML += "<ol>" + Teachers + "</ol>";
                 return;
             } else {
-                document.getElementById("TeacherList").innerHTML += "<ol><li>접근 권한이 없습니다.</li></ol>";
+                obj.innerHTML = "관리자 목록<ol><li>접근 권한이 없습니다.</li></ol>";
             }
         } else {
-            document.getElementById("TeacherList").innerHTML += "<ol><li>접근 권한이 없습니다.</li></ol>";
+            obj.innerHTML = "관리자 목록<ol><li>접근 권한이 없습니다.</li></ol>";
         }
     }
 }
 function mOver(obj) {
-    obj.innerHTML = "동아리 멤버 목록";
+    obj.innerHTML = "동아리 면접자 명단";
     let Members;
     Members = "총 " + MemberList.length + "명";
     for (i = 0; i < MemberList.length; i++) {
