@@ -14,18 +14,21 @@ MemberList = [
     { name: "류승원", studno: "10710" },
     { name: "안재현", studno: "10716" },
 ];
-if (window.confirm("대현고등학교 학생입니까?")) {
-    var my = {};
-    my.name = window.prompt("이름을 입력하세요", "홍길동");
-    window.name();
-} else if (window.confirm("페이지 관리자입니까?")) {
-    var my = {};
-    my.name = window.prompt("이름을 입력하세요", "홍길동");
-    window.TeacherName();
-} else {
-    window.location.assign(window.location.href);
-    alert("이 페이지는 대현고등학교 전용 페이지입니다.");
+function Start() {
+    window.location.assign("https://naver.me/xjLwvWvW");
 }
+    if (window.confirm("대현고등학교 학생입니까?")) {
+        var my = {};
+        my.name = window.prompt("이름을 입력하세요", "홍길동");
+        window.name();
+    } else if (window.confirm("페이지 관리자입니까?")) {
+        var my = {};
+        my.name = window.prompt("이름을 입력하세요", "홍길동");
+        window.TeacherName();
+    } else {
+        window.location.assign(window.location.href);
+        alert("이 페이지는 대현고등학교 전용 페이지입니다.");
+    }
 function TeacherName() {
     if (my.name == null) {
         window.location.assign(window.location.href);
