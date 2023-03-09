@@ -3,19 +3,18 @@ TeacherList = [
     { name: "남지훈", pw: PassWord },
 ];
 MemberList = [
-    { name: "김동현", studno: "10106" },
+    { name: "박수현", studno: "10116" },
     { name: "김은호", studno: "10206" },
     { name: "정지욱", studno: "10223" },
     { name: "엄찬우", studno: "10317" },
     { name: "김훈", studno: "10414" },
     { name: "박진기", studno: "10417" },
-    { name: "방세현", studno: "10418" },
     { name: "한정훈", studno: "10428" },
     { name: "류승원", studno: "10710" },
     { name: "안재현", studno: "10716" },
 ];
 function Start() {
-    window.location.assign("https://naver.me/xjLwvWvW");
+    alert("접수가 종료되었습니다.");
 }
     if (window.confirm("대현고등학교 학생입니까?")) {
         var my = {};
