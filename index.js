@@ -1,16 +1,22 @@
-PassWord = "대현22";
+PassWord = "대현23";
 TeacherList = [
     { name: "남지훈", pw: PassWord },
 ];
 MemberList = [
-    { name: "박수현", studno: "10116" },
-    { name: "김은호", studno: "10206" },
+    { name: "허윤제", studno: "20323" },
+    { name: "김태연", studno: "20405" },
+    { name: "김민성", studno: "20511" },
+    { name: "남지훈", studno: "20606" },
+    { name: "서효승", studno: "20610" },
+    { name: "강상원", studno: "20701" },
+    { name: "이지훈", studno: "20719" },
+    { name: "최서영", studno: "20724" },
+    { name: "나예준", studno: "20804" },
     { name: "정지욱", studno: "10223" },
     { name: "엄찬우", studno: "10317" },
     { name: "김훈", studno: "10414" },
     { name: "박진기", studno: "10417" },
     { name: "한정훈", studno: "10428" },
-    { name: "류승원", studno: "10710" },
     { name: "안재현", studno: "10716" },
 ];
 function Start() {
@@ -84,7 +90,7 @@ function teacherlist(obj) {
     }
 }
 function mOver(obj) {
-    obj.innerHTML = "동아리 면접자 명단";
+    obj.innerHTML = "동아리 멤버 목록";
     let Members;
     Members = "총 " + MemberList.length + "명";
     for (i = 0; i < MemberList.length; i++) {
