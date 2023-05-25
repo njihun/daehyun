@@ -12,6 +12,7 @@ MemberList = [
     { name: "이지훈", studno: "20719" },
     { name: "최서영", studno: "20724" },
     { name: "나예준", studno: "20804" },
+    { name: "박수현", studno: "10116" },
     { name: "정지욱", studno: "10223" },
     { name: "엄찬우", studno: "10317" },
     { name: "김훈", studno: "10414" },
