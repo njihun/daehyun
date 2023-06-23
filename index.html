@@ -92,20 +92,17 @@
       } else {
         setTimeout(() => {
           contentElement.classList.add('show-content');
-        }, 1500); // 텍스트 타이핑이 끝나고 1.5초 뒤에 내용이 나타나도록 설정
-        
-        setTimeout(() => {
           window.scrollTo({
             top: contentElement.offsetTop,
             behavior: 'smooth'
           });
-        }, 2000); // 텍스트 타이핑이 끝나고 2초 뒤에 자동으로 아래로 스크롤되도록 설정
+        }, 1500); // 텍스트 타이핑이 끝나고 1.5초 뒤에 내용이 나타나도록 설정
       }
     }
 
     window.onload = () => {
-      window.scrollTo(0, 0); // 페이지 로드 시 스크롤을 맨 위로 이동
-      type();
+      setTimeout(function(){
+      scrollTo(0, 0);}, 100), type();
     };
   </script>
 </body>
