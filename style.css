@@ -1,54 +1,78 @@
 body {
     margin: 0;
-    background-image: url("https://placeimg.com/640/480/tech");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-#developer {
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+h2 {
+    font-size: 45px;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 10px;
+    background-color: limegreen;
+    text-align: center;
+}
+#grid {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    border-bottom: 1px solid black;
+}
+ol {
+    border-right: 1px solid black;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+li {
+    font-size: 25px;
+}
+.title {
+    text-decoration:overline;
+    text-shadow: 3px 2px 0px rgb(251, 255, 0);
+    background-image: url(./img/title-background-image.jpg);
+    background-size: cover;
     font-size: 50px;
     font-weight: bold;
-    text-align: center;
-    text-shadow: 0px 50px white;
-}
-.hidden {
-    text-align: center;
-    font-weight: bold;
-    width: 200px;
     border: 2px solid black;
-    background-color: white;
-    margin: 100px auto;
-    padding: 3px;
+    text-align: center;
+    padding: 10%;
+    background-position: center;
 }
-.hidden ol {
-    display: none;
+.contents {
+    padding: 25px;
+    font-size: 20px;
+}
+h3 {
     margin: 0;
-    background-color: gray;
-    text-align: left;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
-.hidden li {
-    font-weight: normal;
-}
-.hidden:hover ol {
-    display: block;
-}
-.button {
-    width: 150px;
-    height: 50px;
-    background-color: dodgerblue;
-    color: white;
-    border-radius: 15px;
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.contents a {
+    text-decoration: underline;
 }
 table {
     background-color: black;
+    width: 100%;
     text-align: center;
-    width: 70%;
     margin: 0 auto;
-    margin-bottom: 20px;
+}
+tr {
+    background-color: white;
 }
 td {
-    background-color: white;
+    width: 20%;
+}
+@media(max-width:1000px) {
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        border-right: none;
+    }
+
 }

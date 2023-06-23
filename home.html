@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+  <title>대현고등학교 코딩동아리</title>
+</head>
+
+<body>
+
+
+  </h2>
+  <div id="grid">
+    <ol>
+      <li><a href="index.html">컴파일러</a></li>
+      <hr>
+    </ol>
+    <div>
+      <h1 style="margin: 0;">
+        <div class="title">코딩동아리</div>
+      </h1>
+      <h2><a href="index.html" class="top">JavaScript</a>
+
+        <style>
+          .output-box {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: auto;
+            background-color: white;
+          }
+        </style>
+
+        <textarea style="width: 100%; font-size: 20px;" placeholder="실행할 코드를 입력하세요." rows="10" cols="80"
+          id="codeInput"></textarea>
+        <button onclick="executeCode()">실행</button>
+        <br>실행결과
+
+        <div class="output-box">
+          <pre id="output" style="font-size: 20px;">실행 결과가 이곳에 출력됩니다.</pre>
+        </div>
+
+        <script>
+          function executeCode() {
+            const code = document.getElementById("codeInput").value;
+            const outputElement = document.getElementById("output");
+            try {
+              result = eval(code);
+            } catch (err) {
+              result = err;
+            }
+            outputElement.innerText = result;
+          }
+        </script>
+    </div>
+  </div>
+</body>
+
+</html>

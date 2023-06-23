@@ -1,49 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>대현고등학교 - 코딩 동아리</title>
+  <title>코딩 동아리 소개</title>
+  <style>
+    /* 스타일 지정 */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .typing-effect {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 5s steps(30, end);
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    .content {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      transform: translateY(100px);
+    }
+    
+    .show-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-
 <body>
-    <div id="developer">Made by 남지훈</div>
-    <div class="hidden" id="TeacherList" onmouseover="teacherlist(this)">관리자 목록</div>
-    <div class="hidden" id="MemberList" onmouseover="mOver(this)">동아리 멤버 목록</div>
-</body>
-    <table>
-        <tr>
-            <td>1반</td>
-            <td>김동현<br>(불합격)</td>
-            <td>박수현<br>(불합격)</td>
-        </tr>
-        <tr>
-            <td>2반</td>
-            <td>김은호<br>(불합격)</td>
-            <td style="background-color: yellow;">정지욱<br>(합격)</td>
-        </tr>
-        <tr>
-            <td>3반</td>
-            <td style="background-color: yellow;">엄찬우<br>(합격)</td>
-            <td>이유빈<br>(불합격)</td>
-        </tr>
-        <tr>
-            <td>4반</td>
-            <td style="background-color: yellow;">김훈<br>(합격)</td>
-            <td style="background-color: yellow;">박진기<br>(합격)</td>
-            <td>방세현<br>(불합격)</td>
-            <td style="background-color: yellow;">한정훈<br>(합격)</td>
-        </tr>
-        <tr>
-            <td>7반</td>
-            <td>류승원<br>(불합격)</td>
-            <td style="background-color: yellow;">안재현<br>(합격)</td>
-        </tr>
-    </table>
-</body>
+  <div class="hero-section">
+    <h1>
+      <span class="typing-effect"></span>
+    </h1>
+  </div>
 
+  <div class="content">
+    <h2>코딩 동아리 소개</h2>
+    <p>우리 동아리는 코딩에 관심 있는 학생들이 모여 활동하는 곳입니다.</p>
+    
+    <h2>목표</h2>
+    <ul>
+      <li>코딩 지식 확장</li>
+      <li>창의력과 문제 해결 능력 육성</li>
+      <li>서로를 지원하는 커뮤니티 구축</li>
+    </ul>
+    
+    <h2>활동 내용</h2>
+    <p>주로 다음과 같은 활동을 진행합니다:</p>
+    <ul>
+      <li>코딩 스터디</li>
+      <li>프로젝트 개발</li>
+      <li>알고리즘 대회 참가</li>
+      <li>기술 발표 및 세미나</li>
+    </ul>
+  </div>
+  
+  <script>
+    // JavaScript로 추가적인 기능을 구현할 수도 있습니다.
+    const text = "한국고등학교의 코딩동아리입니다.";
+    const typingElement = document.querySelector('.typing-effect');
+    const contentElement = document.querySelector('.content');
+
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100); // 한 글자씩 출력되는 속도를 조정하려면 이 값을 조정하세요.
+      } else {
+        setTimeout(() => {
+          contentElement.classList.add('show-content');
+        }, 1500); // 텍스트 타이핑이 끝나고 1.5초 뒤에 내용이 나타나도록 설정
+        
+        setTimeout(() => {
+          window.scrollTo({
+            top: contentElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }, 2000); // 텍스트 타이핑이 끝나고 2초 뒤에 자동으로 아래로 스크롤되도록 설정
+      }
+    }
+
+    window.onload = () => {
+      window.scrollTo(0, 0); // 페이지 로드 시 스크롤을 맨 위로 이동
+      type();
+    };
+  </script>
+</body>
 </html>
