@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>코딩 동아리 소개</title>
+  <title>뉴-대현고 코딩동아리 소개</title>
   <style>
     /* 스타일 지정 */
     body {
@@ -13,7 +13,7 @@
     }
     
     .hero-section {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,6 +24,7 @@
       overflow: hidden;
       white-space: nowrap;
       animation: typing 5s steps(30, end);
+      font-size: 24px;
     }
     
     @keyframes typing {
@@ -32,7 +33,7 @@
     }
     
     .content {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -45,6 +46,10 @@
     .show-content {
       opacity: 1;
       transform: translateY(0);
+    }
+    
+    h2, p, ul {
+      font-size: 18px;
     }
   </style>
 </head>
@@ -70,6 +75,7 @@
     <p>주로 다음과 같은 활동을 진행합니다:</p>
     <ul>
       <li>코딩 스터디</li>
+      <li>프로젝트 기획 및 디자인</li>
       <li>프로젝트 개발</li>
       <li>알고리즘 대회 참가</li>
       <li>기술 발표 및 세미나</li>
@@ -78,7 +84,7 @@
   
   <script>
     // JavaScript로 추가적인 기능을 구현할 수도 있습니다.
-    const text = "한국고등학교의 코딩동아리입니다.";
+    const text = "한국고등학교 코딩동아리입니다.";
     const typingElement = document.querySelector('.typing-effect');
     const contentElement = document.querySelector('.content');
 
@@ -102,7 +108,7 @@
 
     window.onload = () => {
       setTimeout(function(){
-      scrollTo(0, 0);}, 100), type();
+      scrollTo(0, 0);}, 100); type();
     };
   </script>
 </body>
