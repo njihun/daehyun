@@ -3,7 +3,6 @@
 <head>
   <title>뉴-대현고 코딩동아리 소개</title>
   <style>
-    /* 스타일 지정 */
     body {
       background-color: #000;
       color: #fff;
@@ -14,6 +13,7 @@
     
     .hero-section {
       min-height: 100vh;
+      font-size: 130%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -21,7 +21,6 @@
     }
     
     .typing-effect {
-      font-size: 130%;
       overflow: hidden;
       white-space: nowrap;
       animation: typing 5s steps(30, end);
@@ -33,7 +32,6 @@
     }
     
     .content {
-      font-size: 130%;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -53,7 +51,7 @@
 <body>
   <div class="hero-section">
     <h1>
-      <span class="typing-effect"></span>
+      <span class="typing-effect"></span><span id="stick" style="font-size: 130%;">|</span>
     </h1>
   </div>
 
@@ -80,7 +78,6 @@
   </div>
   
   <script>
-    // JavaScript로 추가적인 기능을 구현할 수도 있습니다.
     const text = "한국고등학교 코딩동아리입니다.";
     const typingElement = document.querySelector('.typing-effect');
     const contentElement = document.querySelector('.content');
@@ -91,15 +88,22 @@
       if (index < text.length) {
         typingElement.textContent += text.charAt(index);
         index++;
-        setTimeout(type, 100); // 한 글자씩 출력되는 속도를 조정하려면 이 값을 조정하세요.
-      } else {
+        // if(text[index-1] == " "){
+        //   type();
+        // }else{
+          setTimeout(type, 130); // 한 글자씩 출력되는 속도를 조정하려면 이 값을 조정하세요.
+        // }
+        } else {
+          
         setTimeout(() => {
           contentElement.classList.add('show-content');
+          document.getElementById("stick").textContent = "";
           window.scrollTo({
             top: contentElement.offsetTop,
             behavior: 'smooth'
           });
         }, 1500); // 텍스트 타이핑이 끝나고 1.5초 뒤에 내용이 나타나도록 설정
+        
       }
     }
 
