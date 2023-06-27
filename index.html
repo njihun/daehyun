@@ -3,6 +3,7 @@
 <head>
   <title>뉴-대현고 코딩동아리 소개</title>
   <style>
+    /* 일반 화면 크기에 대한 스타일 */
     body {
       background-color: #000;
       color: #fff;
@@ -66,6 +67,31 @@
       z-index: 1;
       cursor: pointer;
       font-size: 18px;
+    }
+
+    /* 모바일 화면 크기에 대한 스타일 */
+    @media only screen and (max-width: 767px) {
+      body {
+        font-size: 120%; /* 일반 화면 크기에 비해 120%로 증가 */
+      }
+
+      .hero-section {
+        font-size: 110%; /* 일반 화면 크기에 비해 110%로 증가 */
+      }
+
+      .typing-effect {
+        font-size: 100%; /* 일반 화면 크기에 비해 100%로 증가 */
+      }
+
+      .content {
+        font-size: 130%; /* 일반 화면 크기에 비해 130%로 증가 */
+      }
+
+      #link {
+        width: 500px; /* 일반 화면 크기에 비해 300px로 증가 */
+        height: 100px; /* 일반 화면 크기에 비해 60px로 증가 */
+        font-size: 36px; /* 일반 화면 크기에 비해 20px로 증가 */
+      }
     }
   </style>
 </head>
